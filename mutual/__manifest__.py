@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Mutual',
-    'version': '1.0',
+    'version': '17.0',
     'summary': 'Gestion de afiliados, familiares, creditos',
     'category': 'Tools',
     'sequence': 10,

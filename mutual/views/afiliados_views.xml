@@ -2,16 +2,16 @@
 <odoo>
 	<!-- Vista Tree -->
 	<record id="view_mutual_afiliado_tree" model="ir.ui.view">
-		<field name="name">mutual.afiliado.list</field>
+		<field name="name">mutual.afiliado.tree</field>
 		<field name="model">mutual.afiliado</field>
 		<field name="arch" type="xml">
-			<list string="Afiliados">
+			<tree string="Afiliados">
 				<field name="afiliado"/>
 				<field name="nombre"/>
 				<field name="dni"/>
 				<field name="cuil"/>
 				
-			</list>
+			</tree>
 		</field>
 	</record>
 

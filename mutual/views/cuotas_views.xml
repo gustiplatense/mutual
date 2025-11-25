@@ -1,14 +1,14 @@
 <odoo>
 	<record id="view_mutual_cuota_tree" model="ir.ui.view">
-		<field name="name">mutual.cuota.list</field>
+		<field name="name">mutual.cuota.tree</field>
 		<field name="model">mutual.cuota</field>
 		<field name="arch" type="xml">
-			<list string="Cuotas">
+			<tree string="Cuotas">
 				<field name="operacion_id"/>
 				<field name="cuota"/>
 				<field name="fecha"/>
 				<field name="estado"/>
-			</list>
+			</tree>
 		</field>
 	</record>
 

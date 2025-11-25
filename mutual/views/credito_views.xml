@@ -1,9 +1,9 @@
 <odoo>
 	<record id="view_credito_tree" model="ir.ui.view">
-		<field name="name">credito.list</field>
+		<field name="name">credito.tree</field>
 		<field name="model">mutual.credito</field>
 		<field name="arch" type="xml">
-			<list>
+			<tree>
 				<field name="dni"/>
 				<field name="nombre_afiliado"/>
 				<field name="empleador_afiliado"/>
@@ -12,7 +12,7 @@
 				<field name="monto"/>
 				<field name="monto_solicitado"/>
 				<field name="comercio"/>
-			</list>
+			</tree>
 		</field>
 	</record>
 </odoo>

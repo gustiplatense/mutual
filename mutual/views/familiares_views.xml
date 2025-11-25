@@ -1,13 +1,13 @@
 <odoo>
 	<record id="view_mutual_familiar_tree" model="ir.ui.view">
-		<field name="name">mutual.familiar.list</field>
+		<field name="name">mutual.familiar.tree</field>
 		<field name="model">mutual.familiar</field>
 		<field name="arch" type="xml">
-			<list string="Familiares">
+			<tree string="Familiares">
 				<field name="afiliado_id"/>
 				<field name="nombre"/>
 				<field name="parentesco"/>
-			</list>
+			</tree>
 		</field>
 	</record>
 

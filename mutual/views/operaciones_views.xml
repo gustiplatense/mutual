@@ -1,14 +1,14 @@
 <odoo>
 	<record id="view_mutual_operacion_tree" model="ir.ui.view">
-		<field name="name">mutual.operacion.list</field>
+		<field name="name">mutual.operacion.tree</field>
 		<field name="model">mutual.operacion</field>
 		<field name="arch" type="xml">
-			<list string="Operaciones">
+			<tree string="Operaciones">
 				<field name="solicitud"/>
 				<field name="afiliado_id"/>
 				<field name="estado"/>
 				<field name="otorgado"/>
-			</list>
+			</tree>
 		</field>
 	</record>
 
