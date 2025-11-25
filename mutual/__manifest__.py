@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+{
+    'name': 'Mutual',
+    'version': '1.0',
+    'summary': 'Gestion de afiliados, familiares, creditos',
+    'category': 'Tools',
+    'sequence': 10,
+    'author': 'Digitalo Consulting SRL',
+    'depends': ['base', 'contacts'],
+    'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'views/afiliados_search.xml',
+        'views/familiares_search.xml',
+        'views/afiliados_views.xml',
+        'views/familiares_views.xml',
+        'views/operaciones_views.xml',
+        'views/cuotas_views.xml',
+        'views/res_partner_views.xml',
+        'views/menu_views.xml',
+        'data/ir_sequence.xml',
+        'views/credito_views.xml',
+        'views/credito_importador_views.xml',
+        'views/credito_log_views.xml',
+
+    ],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+}

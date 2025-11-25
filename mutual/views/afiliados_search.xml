@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_mutual_afiliado_search" model="ir.ui.view">
+		<field name="name">mutual.afiliado.search</field>
+		<field name="model">mutual.afiliado</field>
+		<field name="arch" type="xml">
+			<search string="Buscar Afiliados">
+				<!-- Campos incluidos en la búsqueda libre -->
+				<field name="afiliado"/>
+				<field name="nombre"/>
+				<field name="dni"/>
+				<field name="cuil"/>
+				<field name="email"/>
+				<field name="telefono"/>
+
+				<!-- Filtros rápidos -->
+				<filter name="activos" string="Activos" domain="[('fecha_baja','=',False)]"/>
+				<filter name="inactivos" string="Inactivos" domain="[('fecha_baja','!=',False)]"/>
+
+				<!-- Agrupaciones -->
+				<group expand="0" string="Agrupar por">
+					<filter name="group_civil" string="Estado Civil" context="{'group_by':'civil'}"/>
+					<filter name="group_localidad" string="Localidad" context="{'group_by':'localidad'}"/>
+				</group>
+			</search>
+		</field>
+	</record>
+</odoo>

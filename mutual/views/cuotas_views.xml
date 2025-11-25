@@ -1,0 +1,43 @@
+<odoo>
+	<record id="view_mutual_cuota_tree" model="ir.ui.view">
+		<field name="name">mutual.cuota.list</field>
+		<field name="model">mutual.cuota</field>
+		<field name="arch" type="xml">
+			<list string="Cuotas">
+				<field name="operacion_id"/>
+				<field name="cuota"/>
+				<field name="fecha"/>
+				<field name="estado"/>
+			</list>
+		</field>
+	</record>
+
+	<record id="view_mutual_cuota_form" model="ir.ui.view">
+		<field name="name">mutual.cuota.form</field>
+		<field name="model">mutual.cuota</field>
+		<field name="arch" type="xml">
+			<form string="Cuota">
+				<sheet>
+					<group>
+						<field name="operacion_id"/>
+						<field name="cuota"/>
+						<field name="fecha"/>
+						<field name="estado"/>
+					</group>
+					<group>
+						<field name="detalle"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="action_mutual_cuotas" model="ir.actions.act_window">
+		<field name="name">Cuotas</field>
+		<field name="res_model">mutual.cuota</field>
+		<field name="view_mode">list,form</field>
+		<field name="help" type="html">
+			<p>Registro de cuotas vinculadas a operaciones</p>
+		</field>
+	</record>
+</odoo>

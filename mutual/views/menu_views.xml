@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- ===================== ACCIONES ===================== -->
+
+	<!-- Acción Afiliados -->
+	<record id="action_mutual_afiliados" model="ir.actions.act_window">
+		<field name="name">Afiliados</field>
+		<field name="res_model">mutual.afiliado</field>
+		<field name="view_mode">list,form</field>
+	</record>
+
+	<!-- Acción Familiares -->
+	<record id="action_mutual_familiares" model="ir.actions.act_window">
+		<field name="name">Familiares</field>
+		<field name="res_model">mutual.familiar</field>
+		<field name="view_mode">list,form</field>
+	</record>
+
+	<!-- Acción Operaciones -->
+	<record id="action_mutual_operaciones" model="ir.actions.act_window">
+		<field name="name">Operaciones</field>
+		<field name="res_model">mutual.operacion</field>
+		<field name="view_mode">list,form</field>
+	</record>
+
+	<!-- Acción Cuotas -->
+	<record id="action_mutual_cuotas" model="ir.actions.act_window">
+		<field name="name">Cuotas</field>
+		<field name="res_model">mutual.cuota</field>
+		<field name="view_mode">list,form</field>
+	</record>
+
+	<!-- ===================== MENÚS ===================== -->
+
+	<!-- Menú raíz -->
+	<menuitem id="menu_mutual_root" name="Mutual" sequence="10"/>
+
+	<!-- Submenús -->
+	<!-- Menú Afiliados -->
+	<menuitem id="menu_mutual_afiliados" name="Afiliados"
+			  parent="menu_mutual_root"/>
+
+	<!-- Submenú: Lista de Afiliados -->
+	<menuitem id="menu_mutual_afiliados_list" name="Consulta / Modificacion"
+              parent="menu_mutual_afiliados"
+              action="action_mutual_afiliados"/>
+
+	<!-- Submenú: Familiares -->
+	<menuitem id="menu_mutual_familiares" name="Familiares"
+              parent="menu_mutual_afiliados"
+              action="action_mutual_familiares"/>
+
+	<!-- Submenú: Reportes Afiliados -->
+	<menuitem id="menu_mutual_afiliados_reportes" name="Reportes"
+              parent="menu_mutual_afiliados" />
+
+	<!-- Menú Liquidaciones -->
+	<menuitem id="menu_mutual_liquidaciones" name="Liquidaciones"
+		  parent="menu_mutual_root"/>
+	
+	<!-- Submenú: Liq a Empresas -->
+	<menuitem id="menu_mutual_liq_empresas" name="A Empresas"
+			  parent="menu_mutual_liquidaciones"/>
+	<!-- Submenú: Reportes -->
+	<menuitem id="menu_mutual_liq_reportes" name="Reportes"
+			  parent="menu_mutual_liquidaciones"/>
+
+	<!-- Menu: Operaciones -->
+	<menuitem id="menu_mutual_operaciones" name="Operaciones"
+	  parent="menu_mutual_root"/>
+	
+	<!-- Submenú: Lista de Operaciones -->
+	<menuitem id="menu_mutual_operaciones_list" name="Consulta / Modificacion"
+			  parent="menu_mutual_operaciones"
+              action="action_mutual_operaciones"/>
+	
+	<!-- Submenú: Reportes Operaciones -->
+	<menuitem id="menu_mutual_operaciones_reportes" name="Reportes"
+			  parent="menu_mutual_operaciones"/>
+	
+	<!--  action="action_mutual_operaciones"/> -->
+	
+	<!-- Submenu: Cuotas -->
+	<menuitem id="menu_mutual_operaciones_cuotas" name="Cuotas"
+              parent="menu_mutual_operaciones"
+              action="action_mutual_cuotas"/>
+	
+	<!-- Menu: Configuracion -->
+	<menuitem id="menu_mutual_config" name="Configuraciones"
+		  parent="menu_mutual_root"/>
+	
+	<!-- Submenú: Parametros -->
+	<menuitem id="menu_mutual_parametros" name="Parametros"
+			  parent="menu_mutual_config"/>
+
+	<record id="action_credito_log" model="ir.actions.act_window">
+		<field name="name">Creditos Omitidos</field>
+		<field name="res_model">mutual.credito.log</field>
+		<field name="view_mode">list</field>
+	</record>
+
+	<menuitem id="menu_credito_log" name="Creditos Omitidos" parent="menu_mutual_root" action="action_credito_log"/>
+
+	<record id="action_mutual_operaciones" model="ir.actions.act_window">
+		<field name="name">Operaciones</field>
+		<field name="res_model">mutual.operacion</field>
+		<field name="view_mode">list,form</field>
+		<field name="help" type="html">
+			<p>Registro de operaciones</p>
+		</field>
+	</record>
+
+	<menuitem id="menu_credito_log" name="otras Operaciones" parent="menu_mutual_root" action="action_mutual_operaciones"/>
+
+	<record id="action_credito_importador" model="ir.actions.act_window">
+		<field name="name">Importar Creditos</field>
+		<field name="res_model">mutual.credito.importador</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+
+	<menuitem id="menu_credito_importador" name="Importar Creditos" parent="menu_mutual_root" action="action_credito_importador"/>
+	
+	
+</odoo>

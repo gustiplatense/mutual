@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_mutual_familiar_search" model="ir.ui.view">
+		<field name="name">mutual.familiar.search</field>
+		<field name="model">mutual.familiar</field>
+		<field name="arch" type="xml">
+			<search string="Buscar Familiares">
+				<!-- Campos incluidos en la búsqueda libre -->
+				<field name="nombre"/>
+				<field name="dni"/>
+				<field name="nacioel"/>
+				<field name="parentesco"/>
+
+				<!-- Filtros rápidos -->
+				<filter name="hijos" string="Hijos" domain="[('parentesco','=','HIJO')]"/>
+				<filter name="conyuges" string="Cónyuges" domain="[('parentesco','=','CONYUGE')]"/>
+
+				<!-- Agrupaciones -->
+				<group expand="0" string="Agrupar por">
+					<filter name="group_parentesco" string="Parentesco" context="{'group_by':'parentesco'}"/>
+					<filter name="group_afiliado" string="Afiliado" context="{'group_by':'afiliado_id'}"/>
+				</group>
+			</search>
+		</field>
+	</record>
+</odoo>

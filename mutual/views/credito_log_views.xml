@@ -1,0 +1,16 @@
+<odoo>
+    <record id="view_credito_log_tree" model="ir.ui.view">
+        <field name="name">credito.log.list</field>
+        <field name="model">mutual.credito.log</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="fecha_log"/>
+                <field name="archivo_origen"/>
+                <field name="motivo"/>
+                <field name="linea_original"/>
+            </list>
+        </field>
+    </record>
+
+
+</odoo>

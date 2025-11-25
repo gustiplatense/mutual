@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mutual_afiliado_user,access_mutual_afiliado_user,model_mutual_afiliado,base.group_user,1,1,1,1
+access_mutual_familiar_user,access_mutual_familiar_user,model_mutual_familiar,base.group_user,1,1,1,1
+access_mutual_operacion_user,access_mutual_operacion_user,model_mutual_operacion,base.group_user,1,1,1,1
+access_mutual_cuota_user,access_mutual_cuota_user,model_mutual_cuota,base.group_user,1,1,1,1
+access_mutual_cuota_user,access_mutual_cuota_user,model_mutual_cuota,base.group_user,1,1,1,1
+access_mutual_credito_user,access_mutual_credito_user,model_mutual_credito,base.group_user,1,1,1,1
+access_mutual_credito_importador_user,access_mutual_credito_importador_user,model_mutual_credito_importador,base.group_user,1,1,1,1
+access_mutual_credito_log,access_mutual_credito_log,model_mutual_credito_log,base.group_user,1,1,1,1
+

@@ -1,0 +1,45 @@
+<odoo>
+	<record id="view_mutual_operacion_tree" model="ir.ui.view">
+		<field name="name">mutual.operacion.list</field>
+		<field name="model">mutual.operacion</field>
+		<field name="arch" type="xml">
+			<list string="Operaciones">
+				<field name="solicitud"/>
+				<field name="afiliado_id"/>
+				<field name="estado"/>
+				<field name="otorgado"/>
+			</list>
+		</field>
+	</record>
+
+	<record id="view_mutual_operacion_form" model="ir.ui.view">
+		<field name="name">mutual.operacion.form</field>
+		<field name="model">mutual.operacion</field>
+		<field name="arch" type="xml">
+			<form string="Operacion">
+				<sheet>
+					<group>
+						<field name="solicitud"/>
+						<field name="afiliado_id"/>
+						<field name="comercio"/>
+						<field name="ingreso"/>
+						<field name="aceptado"/>
+						<field name="estado"/>
+					</group>
+					<group>
+						<field name="otorgado"/>
+						<field name="comision"/>
+						<field name="currency_id"/>
+						<field name="cantidad"/>
+					</group>
+					<group>
+						<field name="primera"/>
+						<field name="ultima"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+</odoo>
