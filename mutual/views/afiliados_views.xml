@@ -82,16 +82,7 @@
 										type="object"
 										class="btn-primary"/>
 							</group>
-							<field name="operacion_ids">
-								<list editable="bottom">
-									<field name="solicitud"/>
-									<field name="comercio"/>
-									<field name="ingreso"/>
-									<field name="estado"/>
-									<field name="otorgado"/>
-									<field name="cantidad"/>
-								</list>
-							</field>
+
 						</page>
 						<page string="Observaciones">
 							<field name="obs"/>
