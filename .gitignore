@@ -1,0 +1,12 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/mutual17/CopilotIndices/18.3.180.61135
+/.vs/mutual17.slnx/copilot-chat/f38cea7d/sessions
+/.vs/mutual17.slnx/FileContentIndex
+/.vs/mutual17.slnx/v18/.wsuo
+/.vs/mutual17.slnx/v18/DocumentLayout.backup.json
+/.vs/mutual17.slnx/v18/DocumentLayout.json
+/.vs/slnx.sqlite
+/.vs/slnx.sqlite-journal
