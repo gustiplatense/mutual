@@ -7,8 +7,7 @@ class MutualAfiliado(models.Model):
     _rec_name = 'afiliado'
     _inherit = ['mail.thread', 'mail.activity.mixin']  # Esto activa el chatter
 
-
-    afiliado = fields.Integer(string='Nro de Afiliado',required=True,copy=False,readonly=True,index=True,default=0)
+    afiliado = fields.Integer(string='Nro de Afiliado', required=True, copy=False, readonly=True, index=True, default=0)
 
     legajo = fields.Char(string='Legajo', required=True, tracking=True)
     nombre = fields.Char(string='Nombre', required=True, tracking=True)
@@ -32,7 +31,20 @@ class MutualAfiliado(models.Model):
         string='Estado Civil'
     )
     ingreso = fields.Date(string='Fecha de Ingreso')
-    empleador = fields.Many2one('res.partner', string='Empleador', tracking=True)
+    empleador = fields.Many2one(
+        'res.partner',
+        string='Empleador',
+        tracking=True,
+        domain="[('es_empleador','=',True)]",
+        help='Seleccionar la empresa empleadora asociada (solo partners marcados como empleadores).'
+    )
+    id_empleador = fields.Char(
+        string='ID Empleador',
+        related='empleador.id_empleador',
+        store=True,
+        readonly=True,
+        help='Numero de empleador tomado del partner asociado.'
+    )
     fecha_alta = fields.Date(string='Fecha de Alta', tracking=True)
     fecha_baja = fields.Date(string='Fecha de Baja', tracking=True)
     obs = fields.Text(string='Observaciones', tracking=True)
@@ -56,7 +68,7 @@ class MutualAfiliado(models.Model):
             'view_mode': 'form',
             'context': {'default_afiliado_id': self.id},
             'target': 'current',
-            }
+        }
 
     def action_add_familiar(self):
         """Abre el formulario de alta de Familiar con el afiliado ya preseleccionado"""
@@ -68,7 +80,8 @@ class MutualAfiliado(models.Model):
             'view_mode': 'form',
             'context': {'default_afiliado_id': self.id},
             'target': 'current',
-            }
+        }
+
     def name_get(self):
         result = []
         for record in self:
@@ -76,14 +89,6 @@ class MutualAfiliado(models.Model):
             name = f"{record.afiliado} - {record.nombre or ''}"
             result.append((record.id, name))
         return result
-
-   # @api.model_create_multi
-   # def create(self, vals_list):
-   #     for vals in vals_list:
-   #         if not vals.get('afiliado'):
-   #             seq = self.env['ir.sequence'].next_by_code('afiliado.afiliado')
-   #             vals['afiliado'] = int(seq) if seq and seq.isdigit() else 0
-   #     return super().create(vals_list)
 
     @api.model
     def create(self, vals):

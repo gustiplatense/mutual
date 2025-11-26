@@ -5,15 +5,15 @@
 		<field name="model">mutual.familiar</field>
 		<field name="arch" type="xml">
 			<search string="Buscar Familiares">
-				<!-- Campos incluidos en la búsqueda libre -->
+				<!-- Campos incluidos en la busqueda libre -->
 				<field name="nombre"/>
 				<field name="dni"/>
 				<field name="nacioel"/>
 				<field name="parentesco"/>
 
-				<!-- Filtros rápidos -->
+				<!-- Filtros rapidos -->
 				<filter name="hijos" string="Hijos" domain="[('parentesco','=','HIJO')]"/>
-				<filter name="conyuges" string="Cónyuges" domain="[('parentesco','=','CONYUGE')]"/>
+				<filter name="conyuges" string="Conyuges" domain="[('parentesco','=','CONYUGE')]"/>
 
 				<!-- Agrupaciones -->
 				<group expand="0" string="Agrupar por">

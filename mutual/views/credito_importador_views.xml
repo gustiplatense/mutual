@@ -3,7 +3,7 @@
 		<field name="name">credito.importador.form</field>
 		<field name="model">mutual.credito.importador</field>
 		<field name="arch" type="xml">
-			<form string="Importar Créditos desde TXT">
+			<form string="Importar Creditos desde TXT">
 				<group>
 					<field name="archivo_txt"/>
 					<field name="nombre_archivo"/>
@@ -15,6 +15,4 @@
 			</form>
 		</field>
 	</record>
-
-
 </odoo>

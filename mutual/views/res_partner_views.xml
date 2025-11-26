@@ -7,7 +7,8 @@
 		<field name="arch" type="xml">
 			<!-- Insertar debajo del campo 'name' -->
 			<xpath expr="//field[@name='name']" position="after">
-				<field name="id_empresa"/>
+				<field name="es_empleador"/>
+				<field name="id_empleador"/>
 			</xpath>
 		</field>
 	</record>
